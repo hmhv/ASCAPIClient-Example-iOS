@@ -41,9 +41,10 @@ final class ContentViewModel: ObservableObject {
     
     func fetchDeviceList() async {
         do {
-            var response = try await DevicesAPI.devicesGetCollection(limit: 10)
+            var response = try await DevicesAPI.devicesGetCollection(sort: [.platform_desc], limit: 10)
             var results = response.data
 
+            // for paging check next url (response.links.next) and request using method xxxxxGetCollection(urlString: nextURLString)
             while let nextURLString = response.links.next {
                 response = try await DevicesAPI.devicesGetCollection(urlString: nextURLString)
                 results.append(contentsOf: response.data)

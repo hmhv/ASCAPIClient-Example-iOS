@@ -61,18 +61,10 @@ struct ContentView: View {
         NavigationView {
             List(vm.devices, id: \.id) { device in
                 Section {
-                    HStack {
-                        Text("deviceClass")
-                        Text(device.attributes?.deviceClass?.rawValue ?? "NO deviceClass")
-                    }
-                    HStack {
-                        Text("model")
-                        Text(device.attributes?.model ?? "NO model")
-                    }
-                    HStack {
-                        Text("addedDate")
-                        Text(device.attributes?.addedDate?.description ?? "NO addedDate")
-                    }
+                    ContentRow(leftString: "deviceClass", rightString: device.attributes?.deviceClass?.rawValue ?? "NO deviceClass")
+                    ContentRow(leftString: "model", rightString: device.attributes?.model ?? "NO model")
+                    ContentRow(leftString: "addedDate", rightString: device.attributes?.addedDate?.description ?? "NO addedDate")
+
                 } header: {
                     Text(device.attributes?.name ?? "NO name").font(.body).textCase(.none)
                 }
@@ -86,14 +78,8 @@ struct ContentView: View {
         NavigationView {
             List(vm.xcodeVersions, id: \.id) { xcodeVersion in
                 Section {
-                    HStack {
-                        Text("version")
-                        Text(xcodeVersion.attributes?.version ?? "NO version")
-                    }
-                    HStack {
-                        Text("testDestinations.count")
-                        Text(xcodeVersion.attributes?.testDestinations?.count.description ?? "NO testDestinations")
-                    }
+                    ContentRow(leftString: "version", rightString: xcodeVersion.attributes?.version ?? "NO version")
+                    ContentRow(leftString: "testDestinations.count", rightString: xcodeVersion.attributes?.testDestinations?.count.description ?? "NO testDestinations")
                 } header: {
                     Text(xcodeVersion.attributes?.name ?? "NO name").font(.body).textCase(.none)
                 }
@@ -131,6 +117,21 @@ struct ContentView: View {
         }
     }
 
+}
+
+struct ContentRow: View {
+    let leftString: String
+    let rightString: String
+
+    var body: some View {
+        HStack {
+            Text(leftString)
+                .foregroundColor(.gray)
+                .bold()
+            Spacer()
+            Text(rightString)
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

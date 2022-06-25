@@ -8,7 +8,7 @@ In the Example, I tried 3 API.
 - [List All Xcode Versions Available in Xcode Cloud](https://developer.apple.com/documentation/appstoreconnectapi/list_all_xcode_versions_available_in_xcode_cloud)
 - [Start a Build(Start a new Xcode Cloud build for a workflow.)](https://developer.apple.com/documentation/appstoreconnectapi/start_a_build)
 
-## how to build
+## How to build
 
 #### 1. Clone this repository
 
@@ -36,6 +36,6 @@ and fix [Here](https://github.com/hmhv/ASCAPIClient-Example-iOS/blob/main/ASCAPI
 
 select `Product -> Run`
 
-![](images/README.md-15-38-22.png)
-![](images/README.md-15-38-51.png)
+![](images/2022-06-25-20.22.47.png)
+![](images/2022-06-25-20.22.51.png)
 ![](images/README.md-15-39-03.png)
