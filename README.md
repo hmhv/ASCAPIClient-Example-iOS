@@ -14,7 +14,6 @@ In the Example, I tried 3 API.
 
 ```bash
 git clone git@github.com:hmhv/ASCAPIClient-Example-iOS.git
-cd ASCAPIClient
 ```
 
 #### 2. Open Xcode Project
