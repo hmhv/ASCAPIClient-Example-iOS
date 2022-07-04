@@ -65,10 +65,10 @@ final class ContentViewModel: ObservableObject {
         }
     }
 
-    func startBuild(wordflowID: String) async {
+    func startBuild(workflowID: String) async {
         do {
             message = "Build Requested"
-            let workflowData = CiBuildRunRelationshipsWorkflowData(type: .ciworkflows, id: wordflowID)
+            let workflowData = CiBuildRunRelationshipsWorkflowData(type: .ciworkflows, id: workflowID)
             let workflow = CiBuildRunCreateRequestDataRelationshipsWorkflow(data: workflowData)
             let relationships = CiBuildRunCreateRequestDataRelationships(workflow: workflow)
             let data = CiBuildRunCreateRequestData(type: .cibuildruns, relationships: relationships)
