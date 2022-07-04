@@ -103,7 +103,7 @@ struct ContentView: View {
                         guard !workflowID.isEmpty else { return }
                         
                         Task {
-                            await vm.startBuild(wordflowID: workflowID)
+                            await vm.startBuild(workflowID: workflowID)
                         }
                     } label: {
                         Text("Start a Build")
