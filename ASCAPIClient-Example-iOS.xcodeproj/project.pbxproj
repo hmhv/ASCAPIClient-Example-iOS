@@ -368,7 +368,7 @@
 			repositoryURL = "https://github.com/hmhv/ASCAPIClient.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 		7798C31328669F81002A5348 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
