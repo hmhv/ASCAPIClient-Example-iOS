@@ -11,10 +11,10 @@
 		7798C30528669F1A002A5348 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C30428669F1A002A5348 /* ContentView.swift */; };
 		7798C30728669F1B002A5348 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7798C30628669F1B002A5348 /* Assets.xcassets */; };
 		7798C30A28669F1B002A5348 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7798C30928669F1B002A5348 /* Preview Assets.xcassets */; };
-		7798C31228669F56002A5348 /* ASCAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 7798C31128669F56002A5348 /* ASCAPI */; };
 		7798C31528669F81002A5348 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = 7798C31428669F81002A5348 /* SwiftJWT */; };
 		7798C3172866A189002A5348 /* ASCJWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C3162866A189002A5348 /* ASCJWT.swift */; };
 		7798C3192866AC50002A5348 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C3182866AC50002A5348 /* ContentViewModel.swift */; };
+		77CAFBA12BDAABB90076E659 /* ASC in Frameworks */ = {isa = PBXBuildFile; productRef = 77CAFBA02BDAABB90076E659 /* ASC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CAFBA12BDAABB90076E659 /* ASC in Frameworks */,
 				7798C31528669F81002A5348 /* SwiftJWT in Frameworks */,
-				7798C31228669F56002A5348 /* ASCAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +45,7 @@
 			children = (
 				7798C30128669F1A002A5348 /* ASCAPIClient-Example-iOS */,
 				7798C30028669F1A002A5348 /* Products */,
+				77CAFB9F2BDAABB90076E659 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +78,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		77CAFB9F2BDAABB90076E659 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,8 +102,8 @@
 			);
 			name = "ASCAPIClient-Example-iOS";
 			packageProductDependencies = (
-				7798C31128669F56002A5348 /* ASCAPI */,
 				7798C31428669F81002A5348 /* SwiftJWT */,
+				77CAFBA02BDAABB90076E659 /* ASC */,
 			);
 			productName = "ASCAPIClient-Example-iOS";
 			productReference = 7798C2FF28669F1A002A5348 /* ASCAPIClient-Example-iOS.app */;
@@ -367,8 +375,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmhv/ASCAPIClient.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				kind = exactVersion;
+				version = 3.4.1;
 			};
 		};
 		7798C31328669F81002A5348 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
@@ -382,15 +390,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7798C31128669F56002A5348 /* ASCAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7798C31028669F56002A5348 /* XCRemoteSwiftPackageReference "ASCAPIClient" */;
-			productName = ASCAPI;
-		};
 		7798C31428669F81002A5348 /* SwiftJWT */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7798C31328669F81002A5348 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
 			productName = SwiftJWT;
+		};
+		77CAFBA02BDAABB90076E659 /* ASC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7798C31028669F56002A5348 /* XCRemoteSwiftPackageReference "ASCAPIClient" */;
+			productName = ASC;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
