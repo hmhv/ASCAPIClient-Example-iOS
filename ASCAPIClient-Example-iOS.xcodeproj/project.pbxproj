@@ -11,7 +11,6 @@
 		7798C30528669F1A002A5348 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C30428669F1A002A5348 /* ContentView.swift */; };
 		7798C30728669F1B002A5348 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7798C30628669F1B002A5348 /* Assets.xcassets */; };
 		7798C30A28669F1B002A5348 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7798C30928669F1B002A5348 /* Preview Assets.xcassets */; };
-		7798C31528669F81002A5348 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = 7798C31428669F81002A5348 /* SwiftJWT */; };
 		7798C3172866A189002A5348 /* ASCJWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C3162866A189002A5348 /* ASCJWT.swift */; };
 		7798C3192866AC50002A5348 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C3182866AC50002A5348 /* ContentViewModel.swift */; };
 		77CAFBA12BDAABB90076E659 /* ASC in Frameworks */ = {isa = PBXBuildFile; productRef = 77CAFBA02BDAABB90076E659 /* ASC */; };
@@ -33,7 +32,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				77CAFBA12BDAABB90076E659 /* ASC in Frameworks */,
-				7798C31528669F81002A5348 /* SwiftJWT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +100,6 @@
 			);
 			name = "ASCAPIClient-Example-iOS";
 			packageProductDependencies = (
-				7798C31428669F81002A5348 /* SwiftJWT */,
 				77CAFBA02BDAABB90076E659 /* ASC */,
 			);
 			productName = "ASCAPIClient-Example-iOS";
@@ -135,7 +132,6 @@
 			mainGroup = 7798C2F628669F1A002A5348;
 			packageReferences = (
 				7798C31028669F56002A5348 /* XCRemoteSwiftPackageReference "ASCAPIClient" */,
-				7798C31328669F81002A5348 /* XCRemoteSwiftPackageReference "Swift-JWT" */,
 			);
 			productRefGroup = 7798C30028669F1A002A5348 /* Products */;
 			projectDirPath = "";
@@ -379,22 +375,9 @@
 				version = 3.4.1;
 			};
 		};
-		7798C31328669F81002A5348 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kitura/Swift-JWT.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7798C31428669F81002A5348 /* SwiftJWT */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7798C31328669F81002A5348 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
-			productName = SwiftJWT;
-		};
 		77CAFBA02BDAABB90076E659 /* ASC */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7798C31028669F56002A5348 /* XCRemoteSwiftPackageReference "ASCAPIClient" */;
