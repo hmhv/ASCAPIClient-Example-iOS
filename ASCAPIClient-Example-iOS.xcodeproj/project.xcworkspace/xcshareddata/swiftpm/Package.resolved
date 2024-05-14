@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hmhv/ASCAPIClient.git",
       "state" : {
-        "revision" : "1242593b144859850eda7a3e747cb0221bf2cc0b",
-        "version" : "3.4.1"
+        "revision" : "0615c240416659f02f97c7f7335c5a39fcc9a572",
+        "version" : "3.4.2"
       }
     }
   ],
