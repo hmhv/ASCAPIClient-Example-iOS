@@ -26,6 +26,14 @@ struct ContentView: View {
         }
 
         TabView {
+            appListView
+                .tabItem({
+                    HStack {
+                        Image(systemName: "app")
+                        Text("Apps")
+                    }
+                })
+
             deviceListView
                 .tabItem({
                     HStack {
@@ -51,10 +59,26 @@ struct ContentView: View {
                 })
         }
         .task {
+            await vm.fetchAppList()
             await vm.fetchDeviceList()
             await vm.fetchXcodeList()
         }
 
+    }
+
+    var appListView: some View {
+        NavigationView {
+            List(vm.apps, id: \.id) { app in
+                Section {
+                    ContentRow(leftString: "name", rightString: app.attributes?.name ?? "NO name")
+                    ContentRow(leftString: "sku", rightString: app.attributes?.sku ?? "NO sku")
+                } header: {
+                    Text(app.attributes?.bundleId ?? "NO bundleId").font(.body).textCase(.none)
+                }
+            }
+            .navigationTitle("Apps")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 
     var deviceListView: some View {

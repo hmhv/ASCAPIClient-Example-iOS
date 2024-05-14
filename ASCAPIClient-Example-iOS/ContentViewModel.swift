@@ -24,6 +24,7 @@ XXxxxxxx
 @MainActor
 final class ContentViewModel: ObservableObject {
     @Published var message: String?
+    @Published var apps:  [App] = []
     @Published var devices:  [Device] = []
     @Published var xcodeVersions:  [CiXcodeVersion] = []
 
@@ -39,6 +40,23 @@ final class ContentViewModel: ObservableObject {
         message = nil
     }
     
+    func fetchAppList() async {
+        do {
+            var response = try await AppsAPI.appsGetCollection()
+            var results = response.data
+
+            // for paging check next url (response.links.next) and request using method xxxxxGetCollection(urlString: nextURLString)
+            while let nextURLString = response.links.next {
+                response = try await AppsAPI.appsGetCollection(urlString: nextURLString)
+                results.append(contentsOf: response.data)
+            }
+
+            apps = results
+        } catch {
+            message = error.localizedDescription
+        }
+    }
+
     func fetchDeviceList() async {
         do {
             var response = try await DevicesAPI.devicesGetCollection(sort: [.platform2], limit: 7)
