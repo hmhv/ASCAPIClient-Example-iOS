@@ -2,21 +2,12 @@
   "originHash" : "619b6ba0aa38b709d1bd89484347602aed2bfcc4b2e6a617d87a7f9f70685fa6",
   "pins" : [
     {
-      "identity" : "anycodable",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Flight-School/AnyCodable",
-      "state" : {
-        "revision" : "862808b2070cd908cb04f9aafe7de83d35f81b05",
-        "version" : "0.6.7"
-      }
-    },
-    {
       "identity" : "ascapiclient",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hmhv/ASCAPIClient.git",
       "state" : {
-        "revision" : "0615c240416659f02f97c7f7335c5a39fcc9a572",
-        "version" : "3.4.2"
+        "revision" : "ed3f3109fb6ff7ab1618c5b567331643539e17e4",
+        "version" : "3.7.0"
       }
     }
   ],

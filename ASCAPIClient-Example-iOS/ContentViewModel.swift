@@ -30,7 +30,7 @@ final class ContentViewModel: ObservableObject {
 
     init() {
         do {
-            ASCAPI.customHeaders = ["Authorization" : "Bearer \(try ASCJWT.generateJWT(keyID: keyID, issuerID: issuerID, privateKey: privateKey))"]
+            ASCAPIConfiguration.shared.customHeaders = ["Authorization" : "Bearer \(try ASCJWT.generateJWT(keyID: keyID, issuerID: issuerID, privateKey: privateKey))"]
         } catch {
             message = error.localizedDescription
         }
@@ -87,7 +87,7 @@ final class ContentViewModel: ObservableObject {
         do {
             message = "Build Requested"
             let workflowData = CiBuildRunRelationshipsWorkflowData(type: .ciworkflows, id: workflowID)
-            let workflow = CiBuildRunCreateRequestDataRelationshipsWorkflow(data: workflowData)
+            let workflow = CiBuildRunRelationshipsWorkflow(data: workflowData)
             let relationships = CiBuildRunCreateRequestDataRelationships(workflow: workflow)
             let data = CiBuildRunCreateRequestData(type: .cibuildruns, relationships: relationships)
             let request = CiBuildRunCreateRequest(data: data)
